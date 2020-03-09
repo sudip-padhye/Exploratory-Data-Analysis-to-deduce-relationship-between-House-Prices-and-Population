@@ -8,7 +8,7 @@ output:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(tidycensus)
 library(rio)
@@ -358,7 +358,8 @@ ggplot(populationHousingData, aes(x = log(abs(PopulationChange)), y = HousingPri
   xlab("Population Change") +
   ylab("Housing Price Change ($)") +
   scale_color_manual(values = cb_palette) +
-  facet_wrap(Year ~ ., labeller = "label_both")
+  facet_wrap(Year ~ ., labeller = "label_both") +
+  labs(color = "Year")
 ```
 
 A relationship can be observed between the two parameters of changes in population and changes in house prices. In the time period between 2010 and present the graph shows a positive trend which indicates a directly proportional relationship between the two aforementioned variables. In the time period of 2000-2010 there is a decrease in house price with respect to increase in change in population. There is a slight increase in change in house prices with respect to population change.
@@ -373,7 +374,8 @@ ggplot(populationHousingData, aes(x = log(abs(PopulationChange)), y = HousingPri
   xlab("Population Change") +
   ylab("Housing Price Change ($)") +
   scale_color_manual(values = cb_palette) +
-  facet_wrap(Region ~ ., labeller = "label_both")
+  facet_wrap(Region ~ ., labeller = "label_both") + 
+  labs(color = "Year")
 ```
 
 The region wise graphs compel us to introspect on the various trends between changes in population and changes in house prices. Starting with the year 2018 the graph shows an upward trend for all the four regions i.e. with increase in population change there is an increase in change in house prices. In the year range 2010s the population change is in inverse proportion with change in house prices. In 1990s there are no interpretable trends.

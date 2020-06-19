@@ -1,4 +1,4 @@
-#Introduction
+# Introduction
 A researcher for a thinktank wants to learn about how house prices in the U.S. have changed over
 the last few decades, and whether changes in prices are related to population in some way.She has
 taken an introductory statistics course using R, but that was a long time ago, so she is outsourcing
